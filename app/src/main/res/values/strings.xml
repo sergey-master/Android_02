@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shiyko_02</string>
+
+    <string name="title_section1">Домашнее задание</string>
+    <string name="title_section2">Анимации</string>
+    <string name="title_section3">Автор</string>
+
+    <string name="screen_1">Создать проект с Action Bar.
+    \n\nРеализовать паттерн Navigation Drawer.
+    \n\nРеализовать любой список (минимум 2 элемента).
+    \n\nВ отдельном скрине приложения повторить минимум 4 анимации из видеоурока.
+    \n\nminSdkVersion=15</string>
+
+    <string name="screen_21">Blink</string>
+    <string name="screen_22">Rotate</string>
+    <string name="screen_23">Slide down</string>
+    <string name="screen_24">Slide up</string>
+    <string name="screen_25">Zoom in</string>
+    <string name="screen_26">Zoom out</string>
+
+    <string name="screen_3">Автор проекта:
+    \nШийко Сергей</string>
+
+    <string name="log">Log</string>
+    <string name="find">Find</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
