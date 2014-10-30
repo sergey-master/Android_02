@@ -19,9 +19,10 @@
     <ImageView
         android:layout_width="733dp"
         android:layout_height="107dp"
-        android:id="@+id/imageView"
+        android:id="@+id/picture"
         android:src="@drawable/ic_launcher"
-        android:focusable="true" />
+        android:focusable="false"
+        android:longClickable="false" />
 
     <TableRow
         android:layout_width="match_parent"

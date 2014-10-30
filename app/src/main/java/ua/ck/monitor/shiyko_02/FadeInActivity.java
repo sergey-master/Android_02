@@ -8,11 +8,12 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.ImageView;
 
 public class FadeInActivity extends Activity implements AnimationListener {
 
     TextView txtMessage;
+    ImageView imageView;
     Button btn1, btn2, btn3, btn4, btn5, btn6;
 
     // Animation
@@ -22,9 +23,10 @@ public class FadeInActivity extends Activity implements AnimationListener {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
-
+        setContentView(R.layout.screen_2);
         txtMessage = (TextView) findViewById(R.id.text_anim);
+        imageView = (ImageView) findViewById(R.id.picture);
+
         btn1 = (Button) findViewById(R.id.button1);
         btn2 = (Button) findViewById(R.id.button2);
         btn3 = (Button) findViewById(R.id.button3);
@@ -33,12 +35,12 @@ public class FadeInActivity extends Activity implements AnimationListener {
         btn6 = (Button) findViewById(R.id.button6);
 
         // load the animation
-        anim1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
-        anim2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate);
-        anim3 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_down);
-        anim4 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_up);
-        anim5 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_in);
-        anim6 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_out);
+        anim1 = AnimationUtils.loadAnimation(this, R.anim.blink);
+        anim2 = AnimationUtils.loadAnimation(this, R.anim.rotate);
+        anim3 = AnimationUtils.loadAnimation(this, R.anim.slide_down);
+        anim4 = AnimationUtils.loadAnimation(this, R.anim.slide_up);
+        anim5 = AnimationUtils.loadAnimation(this, R.anim.zoom_in);
+        anim6 = AnimationUtils.loadAnimation(this, R.anim.zoom_out);
 
         // set animation listener
         anim1.setAnimationListener(this);
@@ -52,6 +54,7 @@ public class FadeInActivity extends Activity implements AnimationListener {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imageView.startAnimation(anim1);
                 txtMessage.setVisibility(View.VISIBLE);
                 txtMessage.startAnimation(anim1);          // start the animation
             }
@@ -60,6 +63,7 @@ public class FadeInActivity extends Activity implements AnimationListener {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imageView.startAnimation(anim2);
                 txtMessage.setVisibility(View.VISIBLE);
                 txtMessage.startAnimation(anim2);          // start the animation
             }
@@ -67,6 +71,7 @@ public class FadeInActivity extends Activity implements AnimationListener {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imageView.startAnimation(anim3);
                 txtMessage.setVisibility(View.VISIBLE);
                 txtMessage.startAnimation(anim3);          // start the animation
             }
@@ -74,6 +79,7 @@ public class FadeInActivity extends Activity implements AnimationListener {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imageView.startAnimation(anim4);
                 txtMessage.setVisibility(View.VISIBLE);
                 txtMessage.startAnimation(anim4);          // start the animation
             }
@@ -81,6 +87,7 @@ public class FadeInActivity extends Activity implements AnimationListener {
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imageView.startAnimation(anim5);
                 txtMessage.setVisibility(View.VISIBLE);
                 txtMessage.startAnimation(anim5);          // start the animation
             }
@@ -89,6 +96,7 @@ public class FadeInActivity extends Activity implements AnimationListener {
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imageView.startAnimation(anim6);
                 txtMessage.setVisibility(View.VISIBLE);
                 txtMessage.startAnimation(anim6);          // start the animation
             }
@@ -103,20 +111,17 @@ public class FadeInActivity extends Activity implements AnimationListener {
 /*      if((anim==anim1)||(anim==anim2)||(anim==anim3)||(anim==anim4)||(anim==anim5)||(anim==anim6)){
             Toast.makeText(getApplicationContext(), "Animation Stopped",
                     Toast.LENGTH_SHORT).show();
-        }
-*/
+        }   */
     }
 
     @Override
     public void onAnimationRepeat(Animation animation) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public void onAnimationStart(Animation animation) {
         // TODO Auto-generated method stub
-
     }
 
 }

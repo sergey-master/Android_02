@@ -1,6 +1,5 @@
 package ua.ck.monitor.shiyko_02;
 
-
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
